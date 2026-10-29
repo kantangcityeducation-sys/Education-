@@ -1,0 +1,6 @@
+{
+  "name": "ระบบบันทึกและตรวจสอบครุภัณฑ์ (Asset Audit & AI Scanner)",
+  "description": "ระบบสแกนเอกสารทะเบียนครุภัณฑ์ ตรวจสอบสถานะ แจ้งเตือนความผิดปกติ และบันทึกซิงค์ Google Sheets อัตโนมัติ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
