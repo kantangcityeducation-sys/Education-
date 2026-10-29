@@ -8,7 +8,10 @@ import {
   LogOut,
   RefreshCw,
   Building2,
-  CheckCircle2
+  CheckCircle2,
+  Share2,
+  Copy,
+  Check
 } from 'lucide-react';
 import { GoogleSheetsConfig } from '../types';
 
@@ -80,6 +83,19 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <Sparkles className="w-4 h-4 text-emerald-400" />
               <span>AI สรุปผลตรวจสอบ</span>
+            </button>
+
+            {/* Share Link Button */}
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(window.location.href);
+                alert('คัดลอกลิงก์แอปพลิเคชันเรียบร้อยแล้ว! คุณสามารถส่งลิงก์นี้ให้เพื่อนหรือเพื่อนร่วมงานเปิดใช้งานและกรอกข้อมูลในระบบเดียวกันได้ทันที');
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs sm:text-sm font-medium text-sky-300 hover:text-white bg-sky-950/60 hover:bg-sky-900/70 border border-sky-700/60 rounded-lg transition-all cursor-pointer shadow-sm"
+              title="คัดลอกลิงก์เพื่อส่งให้เพื่อนร่วมงานกรอกข้อมูล"
+            >
+              <Share2 className="w-4 h-4 text-sky-400" />
+              <span>แชร์ลิงก์ให้เพื่อน</span>
             </button>
 
             {/* Google Sheets Status / Button */}
